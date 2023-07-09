@@ -1,27 +1,20 @@
-import React from 'react';
-import './App.css';
-
-import styled, {keyframes} from 'styled-components'
+import React, { useState } from "react";
+import styled from "styled-components"
 
 
-const Title = styled.h1`
+const Container = styled.div`
+  background-color: ${(props) => props.theme.bgColor};
+`
+const H1 = styled.h1`
   color: ${(props) => props.theme.textColor};
 `
 
-const Wrapper = styled.div`
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
-  background-color: ${(props) => props.theme.backgroundColor};
-`
-
 function App() {
+  
   return (
-    <Wrapper>
-      <Title>Hello</Title>
-    </Wrapper>
+    <Container>
+      <H1>protected</H1>
+    </Container>
   );
 }
 
